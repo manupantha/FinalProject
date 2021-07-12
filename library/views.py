@@ -178,7 +178,7 @@ def deleteStudent_view(request, student_id):
         # find the "deleted" student from the User model using the email id to reactivate
         c = User.objects.get(username=studentUser.username)
         c.delete()
-        # c.is_active = True
+
 
     except User.DoesNotExist:
         print("User doesnot exist")
